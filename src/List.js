@@ -56,7 +56,10 @@ function App() {
         }}
         noValidate autoComplete="off"> 
         Fruit Name
-        <TextField id="outlined-basic" label="e.x.lemmon" variant="outlined" />
+        <TextField id="outlined-basic" label="e.x.lemmon" variant="outlined" 
+        onSubmit={()=>{
+          var input = document.getElementById('outlined-basic').value;
+          handleFunction(input)}}/>
         <Button onClick={()=>{
             var input = document.getElementById('outlined-basic').value;
             handleFunction(input)}} variant="contained">Add Fruit</Button>
